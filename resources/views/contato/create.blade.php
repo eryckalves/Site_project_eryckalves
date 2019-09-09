@@ -25,7 +25,7 @@
         <div class="col-4 contato">
 
              <!-- FORM -->
-            <form action="/contato" method="post">
+            <form action="/contato" method="post" id="contato">
 
                  <!-- Name -->
                  <div class="form-group">
@@ -59,10 +59,6 @@
 
                 @csrf
 
-                <div class="pt-4" >
-                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
-                </div>
-
             </form>
             <!-- FIM FROM -->
 
@@ -82,9 +78,20 @@
 
     </div>
     <!-- FIM ROW -->
-    
-</div>
 
+    <!-- Section: Custom-button -->
+    <section id="custom-button" class="pb-5"> 
+        <div class="container">
+            <div class="row">
+                <!-- Button , no style tem 4 animações do #custom-button btn.btn(numero) , 
+                numero : 1 a 4  -->
+                <button type="submit" form="contato" class="btn btn2">Enviar Mensagem</button>
+            </div>
+        </div>
+    </section>  
+    <!-- END Section: Custom-button -->
+
+</div>
 
 
 @endsection

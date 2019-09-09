@@ -238,3 +238,104 @@
             -o-filter: brightness(115%);
         }
     }
+
+
+ /* ******************************  */
+ /* ******* Custom Buttom All pages**********  */
+
+    #custom-button .btn
+    {
+        border: 1px solid #3498db;
+        background: none;
+        padding: 10px 20px;
+        font-size: 15px;
+        cursor: pointer;
+        transition: 0.8s;
+        position: absolute;
+        overflow: hidden;
+    }
+
+    #custom-button .btn.btn1 , #custom-button .btn.btn2
+    {
+        color: #3498dc;
+    }
+
+    #custom-button .btn.btn3 , #custom-button .btn.btn4
+    {
+        color: #fff;
+    }   
+
+    #custom-button .btn.btn1:hover ,#custom-button .btn.btn2:hover
+    {
+        color: #fff;
+    }
+
+    #custom-button .btn.btn3:hover , #custom-button .btn.btn4:hover
+    {
+        color: #3498dc;
+    }
+
+    #custom-button .btn::before
+    {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: #3498dc;
+        z-index: -1;
+        transition: 0.8s;
+        -webkit-transition: 0.8s;
+        -moz-transition: 0.8s;
+        -o-transition: 0.8s;
+
+    }
+
+    #custom-button .btn1::before
+    {
+        top: 0 ;
+        border-radius: 0 0 50% 50%;
+    }
+
+    #custom-button .btn2::before
+    {
+        bottom: 0 ;
+        border-radius: 50% 50% 0 0;
+    }
+
+    #custom-button .btn3::before 
+    {
+        top: 0 ;
+        border-radius: 0 0 50% 50%;
+    }
+
+    #custom-button .btn4::before
+    {
+        bottom: 0 ;
+        border-radius: 50% 50% 0 0;
+    }
+
+    #custom-button .btn3::before , #custom-button .btn4::before
+    {
+        height: 180%;
+    }
+
+    #custom-button .btn1:hover::before , #custom-button .btn2:hover::before
+    {
+        height: 180%;
+    }
+
+    #custom-button .btn3:hover::before , #custom-button .btn4:hover::before
+    {
+        height: 0;
+    }
+
+
+
+
+
+
+
+
+
+

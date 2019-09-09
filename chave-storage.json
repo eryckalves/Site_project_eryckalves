@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gothic-parsec-251712",
+  "private_key_id": "88ad2276a9ba991a6b710d6af414febff6ab6e37",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQC1qgP5nUBo0r/J\ngYWQ2bRrDLQQv0cophjlUNhoG5gALq54osdP62ghWCoJt6BXdFj0nRFknAgnKxvV\ntSjmOxQVqMUvr6l8W5pSKJfYakmjN4m6ETZ/Y9DScIajXTeaFWHymdDlfwIRuaH3\nSKKnLExk0Z5LkjHDTVOGqE+rJ4DHVGBxWZV1DxwAOGlg/Q2tFtyWZ7E6xaTMgz2p\ns1fveFOYtyEXEHPzG0RTICEsJMXFQG3bEsJ95gJ5nEvQtpA8HM6tqvXlnbWL1onb\nKiX7QKTcKN2vv3sn/YKaqZxvYlbhcCKFIeq/jXoCblCP1qFSijRt+XZzsu7N4+XZ\nv0W3cSi5AgMBAAECggEAM+9XE5WRRGZ7ze/pb2/N1IzdLayBe22A0I48UAcTfXnb\nB0ICGScDrgS2f/CvNlFc3RHKVykEa643VvFjr+5T351QQkHGAndttu9D+erpAnBu\nP3OMUP8IRCFHXIzZyIM0bVbsEbAtt0OKuldZqNFRRcFnr9MrxtnkdyrHG/c/KbzI\nrQo/Va9QNQJTQSFEd11YHhtm8qkoouT/z0Oy37PuBY1nNVIJ4DeR0TPkhw5Tm5yP\nkYqdLrJVxhTkn+AStSWUZliT0tJqAowLZEr2Pf/2XNeLIH1goyMPdLC99dYXVn7a\nT4nekpK7mXQ6ZRhkL0YO+LgEJT9NvqcJDwMx9o95wQKBgQD9WIkXeGd2NRXhQBJG\nW8v9BFygkpj0HE2SK9+UA6qIchQ0KtbR95lqgcvEsRiawpLFuL7gXQ84yrb1ehIp\nsXZxWOSzDymKpKxK8jQmGwdAaad1ZTbCI2kDINTKfG60ml6n3oWhq6hdJ7HDDMVz\nZtfGSrMr0w7GmzSTG13Pp+ZCBwKBgQC3kTtx9sVMifPaf/QaRh5IWZeRAuYkK/qb\nQXDr4aeRFoV03XOTvdZte43HdANHE4JvwcdUjl9csndyCZ/+MK9qgPnvK6EG+2nk\nLfT7KZg2XOQc+i+DAzfE49uPnkqukRg+xZjQOzpl7Kpa4liKSm/GsbeT5sUgkweJ\n+JV6hLOPPwKBgQDPZu+0eymYKBVldiJ/3x68YBnEir8U+Sa4B5rdfbLaSSopGvkK\no3zBKMk8mQ7fg3LM01XQL98KS0pE5E6CO3oPiQqRXFRR4EX8hRQULgRdwyEIhnex\nr3OE0BfkPMIUsFvVaeJUXEdVG+33FDmBJCx5dSYBNqPeC6ma1MiT+4wReQKBgBWU\n3JFMeuvBuEqzCmbgYYUOC3TAC4CrLv571iPVVtcG98/CjWkMQ56BjSyq5gvALnCn\nLqExT+LdFI/ys721yZnS6g+FaJwiiNOL16aDwGJ7z1Hc1CMqCK98Pn8HFC6r3lba\n8llg7T+4cFrZC6HOmI+aq0OXOQvYXWWKNUC/Q0EPAoGBAO5JszF8/Sk6DNyWsg7N\n7yDefrYLbveXpcI11swZvTmjcumk9OqlcexTADsCY8+gs+v03qQQpfJeMe7tQo8Y\nZMkpKVvBwyCmXIvbJxpDj5rMMlTOuiSSc8YdJOloEif8EHLR3Q6mOdR1A2/jnVcz\nPBY6+H69y9Ixda0iQlrQE+AV\n-----END PRIVATE KEY-----\n",
+  "client_email": "treinaweb-laravel-storage@gothic-parsec-251712.iam.gserviceaccount.com",
+  "client_id": "115868371214093600103",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/treinaweb-laravel-storage%40gothic-parsec-251712.iam.gserviceaccount.com"
+}
