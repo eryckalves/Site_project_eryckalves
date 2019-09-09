@@ -54,7 +54,7 @@
 
                             <!-- column -->
                             <div class="col-xl-10 col-md-11 col-10" style="min-height:100px;">
-                                <h5 class="font-weight-bold mb-3">Bootstrap</h5>
+                                <h5 class="font-weight-bold mb-3">Bootstrap / CSS</h5>
                                 <p class="text-secondary">Lorem ipsum dolor sit amet, consectetur adipisicing elit enim
                                     ad minima veniam, quis nostrum exercitationem ullam. Reprehenderit maiores aperiam
                                     assumenda deleniti hic.</p>

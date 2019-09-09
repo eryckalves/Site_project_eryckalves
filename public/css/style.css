@@ -15,11 +15,6 @@
 
 
 /* ********************************************  */
- /* *******           Button        **********   */
-
- 
-
-/* ********************************************  */
  /* *******Carrossel homepage/index**********   */
 
      #intro .carousel-caption
@@ -84,7 +79,7 @@
      }
      
     /* min-width & max-width */
-    @media screen and (min-width: 600px) and (max-width: 900px) {
+    @media screen and (max-width: 800px) {
         #intro .carousel-caption h2 {
             font-size: 40px;
         }
@@ -209,18 +204,18 @@
         overflow-x: hidden;
     }
 
-    .cards-gallery.cards-gallery .card
+    .gallery-block.cards-gallery .card
     {
         transition: 0.5s ease;
     }
 
-    .cards-gallery.cards-gallery .card img
+    .gallery-block.cards-gallery .card img
     {
         box-shadow: 2px 2px 5px rgba(0,0,0,.5);
         border-radius: 5px;
     }
 
-    .cards-gallery.cards-gallery .card
+    .gallery-block.cards-gallery .card
     {
         margin-bottom: 30px;
         box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
@@ -231,6 +226,9 @@
     {
         .gallery-block .transform-on-hover:hover{
             transform: translateY(-10px) scale(1.02);
+            -webkit-transform: translateY(-10px) scale(1.02);
+            -moz-transform: translateY(-10px) scale(1.02);
+            -o-transform: translateY(-10px) scale(1.02);
             box-shadow: 0px 10px 10px rgba(0, 0, 0, .15) !important;
             filter: brightness(115%);
             -webkit-filter: brightness(115%);
@@ -247,12 +245,19 @@
     {
         border: 1px solid #3498db;
         background: none;
-        padding: 10px 20px;
         font-size: 15px;
         cursor: pointer;
         transition: 0.8s;
         position: absolute;
         overflow: hidden;
+    }
+
+    @media screen and (max-width:0600px)
+    {
+        #custom-button .btn
+        {
+            font-size:14px;
+        }      
     }
 
     #custom-button .btn.btn1 , #custom-button .btn.btn2
@@ -288,7 +293,6 @@
         -webkit-transition: 0.8s;
         -moz-transition: 0.8s;
         -o-transition: 0.8s;
-
     }
 
     #custom-button .btn1::before
