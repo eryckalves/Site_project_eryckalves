@@ -63,18 +63,19 @@
      {
         background-color: #e99a34;
         border-color: #e99a34;
-        border-radius: 12px;
-        width: 12px;
-        height: 12px;
+        height: 15px;
+        width: 15px;
+        border-radius: 20px;
+        cursor: pointer;
      }
 
      #intro .carousel-indicators li
      {
         background-color: #ffffff;
         border-color: #ffffff;
-        border-radius: 12px;
-        width: 12px;
-        height: 12px;
+        height: 15px;
+        width: 15px;
+        border-radius: 20px;
         cursor: pointer;
      }
      

@@ -5,7 +5,7 @@
 <!-- Section: intro -->
 <section id="intro" class="pb-5">
     <!-- homepagecarrossel  :  parar carrossel  data-interval="false" -->
-    <div id="homepagecarrossel" class="carousel slide" data-ride="carousel">
+    <div id="homepagecarrossel" class="carousel slide" data-ride="carousel" data-interval="false">
         <!-- carousel-indicators  -->
         <ol class="carousel-indicators">
             <li data-target="#homepagecarrossel" data-slide-to="0" class="active"></li>
