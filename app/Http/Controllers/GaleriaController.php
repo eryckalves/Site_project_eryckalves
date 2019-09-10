@@ -8,8 +8,7 @@ use App\Post;
 
 class GaleriaController extends Controller
 {
-
-
+    // __construct com middleware('auth') foi removido e gerado um regra personalizada com php artisan make:middleware{nome} mais detalhes no arquivo web.php (rotas) 
     public function index(User $user)
     {
 

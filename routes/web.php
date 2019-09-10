@@ -23,8 +23,12 @@ Route::get('/sobre', 'SobreController@index')->name('sobre.index');
 Route::get('/produto', 'ProdutoController@index')->name('produto.index');
 
 Route::get('/galeria', 'GaleriaController@index')->name('galeria.index');
+
 //rota para a pagina de criar imagem (imagem + caption) metodo controller -> @create - /photo/create
-Route::get('/galeria/create','PostsController@create')->name('posts.create');
+//middleware personalizado para criar php artisan make:middleware {nome} e vai gerar na pasta app/http/middleware/{nome}.php
+//middleware personalizado tem q ser cadastrado app/http/kernel.php nele existe varios modos para usar o novo middleware nesse modo usando protected $routeMiddleware
+Route::get('/galeria/create','PostsController@create')->name('posts.create')->middleware('onlyAdmin');
+
 //rota para chamar Controller que vai salvar o FILE no banco
 Route::post('/galeria/create','PostsController@store');
 
@@ -34,6 +38,7 @@ Route::delete('/galeria/{galeria}', 'PostsController@destroy')->name('galeria.de
 
 Route::get('/contato', 'ContatoController@create')->name('contato.create');
 Route::post('/contato', 'ContatoController@store')->name('contato.create');
+
 
 
 

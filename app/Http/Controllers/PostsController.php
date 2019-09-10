@@ -24,7 +24,7 @@ class PostsController extends Controller
     }
     public function store(Request $request)
     {
-
+        
         //metodo para validar se os campos estao preenchidos.
         // o post da pagina carregado na variavel $data
         $data = request()->validate([
