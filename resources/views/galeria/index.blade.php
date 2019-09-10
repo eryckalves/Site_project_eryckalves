@@ -36,8 +36,7 @@ style .mostrar_excluir:hover .thumbnail a para mostrar o botao de excluir quando
                 <!-- col -->
                 <div class="col">
                     <h2 class="h1 font-weight-bold text-center mb-5">Galeria de Imagens</h2>
-                    <p class="lead text-center">O espelho e os sonhos são coisas semelhantes, é como a imagem do homem diante de si próprio. </P>
-                    <p>José Saramago</P>
+                    <p class="lead text-center">Galeria usando AWS S3 Bucket para as imagens que são adicionadas pela função de create(laravel) </P>
                 </div>
                 <!-- END col -->
             </div>
@@ -75,16 +74,41 @@ style .mostrar_excluir:hover .thumbnail a para mostrar o botao de excluir quando
             <!--row -->
             <div class="row">
 
-                @foreach($posts as $post)
-                    <div class="col-md-4 col-lg-4 mostrar_excluir">
-                        <div class="card border-0 transform-on-hover">
-                            <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
-                            <a href="{{Storage::cloud()->url('/') . $post->image }}" data-lightbox="roadtrip" data-title="{{ $post->caption }}">
-                                <img src="{{ Storage::cloud()->url('/') . $post->image }}" class="w-100">
-                            </a>      
-                        </div>
-                    </div>  
-                @endforeach     
+            @foreach($posts as $post)
+
+                <div class="col-md-6 col-lg-4 mostrar_excluir">
+                    <div class="card border-0 transform-on-hover">
+                        <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
+                        <a href="{{Storage::cloud()->url('/') . $post->image }}" data-lightbox="roadtrip" data-title="{{$post->caption}}">
+                            <img src="{{ Storage::cloud()->url('/') . $post->image }}" class="w-100">
+                        </a>      
+                    </div>
+
+                    @auth
+                    <form action="/galeria/{{$post->id}}" method="POST">  
+                            <!-- para form precisa do token -->  
+                            @csrf
+                            @method('DELETE')  
+                            <div class="thumbnail">
+                                <a href="/galeria/{{$post->id}}" >
+                                    <span>
+                                            <button style=" background-color: Transparent;
+                                                            background-repeat:no-repeat;
+                                                            border: none;
+                                                            cursor:pointer;
+                                                            overflow: hidden;
+                                                            outline:none; " 
+                                                    type="submit"><img style="height:25px;" src="{{asset('storage/images/delete.png')}}">
+                                            </button>
+                                            
+                                    </span>
+
+                                </a>                         
+                            </div>
+                        </form>
+                    @endauth
+                </div>  
+            @endforeach   
 
             <div>
             <!-- FIM row -->

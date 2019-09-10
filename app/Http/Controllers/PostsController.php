@@ -7,6 +7,7 @@ use Intervention\Image\Facades\Image;
 use Illuminate\Support\Facades\Storage;
 use App\Post;
 use App\User;
+use Aws\S3\S3Client;
 
 class PostsController extends Controller
 {
@@ -72,9 +73,29 @@ class PostsController extends Controller
     public function destroy($post_id)
     {
         $post = Post::find($post_id);
-        $pathfile = 'public'.'/'.$post->image;
 
-        Storage::delete($pathfile); //delete from storage
+        // *** local
+        //$pathfile = 'public'.'/'.$post->image;
+        //Storage::delete($pathfile); //delete from storage
+
+        //*** aws s3 bucket
+
+        $s3 = S3Client::factory([
+            'region' => env('AWS_DEFAULT_REGION'),
+            'version'  => 'latest'
+        ]);
+
+        $bucket = 'eryckalves-page';
+        $keyname = $post->image;
+
+        
+        //aws s3 bucket
+
+        $result = $s3->deleteObject(array(
+            'Bucket' => $bucket,
+            'Key'    => $keyname
+        )); 
+
         $post->delete(); // delete from db
         return redirect()->route('galeria.index');
     }
