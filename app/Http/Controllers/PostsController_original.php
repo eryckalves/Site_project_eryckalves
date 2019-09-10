@@ -34,25 +34,15 @@ class PostsController extends Controller
         ]
         );
 
-       
-        // store('nome da pasta' , 'drive')
-        // drive vem do arquivo config/filesystems.php
-        // driver do s3 precisa instalar : composer require league/flysystem-aws-s3-v3 ~1.0
-        // configurar o env. para aws (s3)
-    
-        $ImagePath=request()->file('image')->store('images','s3public');
-
-        // ********* ver a url aws s3 para onde esta indo o arquivo. ***********
-        //Storage::cloud()->url('images');
-        
-        
-        
         // precisa do pacote *  comando composer require intervention/image
         // requer pacote use Intervention\Image\Facades\Image;
         // redimenciona a imagem , metodo fit nao eh igual ao resize
-       // $image = Image::make(public_path("storage/{$ImagePath}"))->fit(1000,1000);
+
+        $ImagePath=request('image')->store('images','public');
         
-        //$image->save();
+        $image = Image::make(public_path("storage/{$ImagePath}"))->fit(1000,1000);
+        
+        $image->save();
 
         //metodo para graver no banco com dependencia auth()->user()->posts()->create([]);
         // auth() : precisa estar logado 

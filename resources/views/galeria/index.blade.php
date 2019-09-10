@@ -56,7 +56,7 @@ style .mostrar_excluir:hover .thumbnail a para mostrar o botao de excluir quando
                 <div class="col">
                     <div class="container_botao">
                         <div class="text-center">
-                            <a href="#">Adicionar Fotos</a>
+                            <a href="{{ route('posts.create') }}">Adicionar Fotos</a>
                         </div>
                     </div>
                 </div>
@@ -72,54 +72,19 @@ style .mostrar_excluir:hover .thumbnail a para mostrar o botao de excluir quando
         <!-- container -->
         <div class="container">
 
-
+            <!--row -->
             <div class="row">
-                
-                <div class="col-md-4 col-lg-4 mostrar_excluir">
-                    <div class="card border-0 transform-on-hover">
-                        <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
-                        <a href="{{ asset('storage/images/galaria1.jpg')}}" data-lightbox="roadtrip" data-title="beautiful Cities">
-                            <img src="{{ asset('storage/images/galaria1.jpg')}}" class="w-100">
-                        </a>      
-                    </div>
-                </div>  
 
-                <div class="col-md-4 col-lg-4 mostrar_excluir">
-                    <div class="card border-0 transform-on-hover">
-                        <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
-                        <a href="{{ asset('storage/images/galeria2.jpg')}}" data-lightbox="roadtrip" data-title="beautiful Cyber Punk">
-                            <img src="{{ asset('storage/images/galeria2.jpg')}}" class="w-100">
-                        </a>      
-                    </div>
-                </div>  
-
-                <div class="col-md-4 col-lg-4 mostrar_excluir">
-                    <div class="card border-0 transform-on-hover">
-                        <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
-                        <a href="{{ asset('storage/images/galeria3.jpg')}}" data-lightbox="roadtrip" data-title="beautiful Skys">
-                            <img src="{{ asset('storage/images/galeria3.jpg')}}" class="w-100">
-                        </a>      
-                    </div>
-                </div>  
-
-                <div class="col-md-4 col-lg-4 mostrar_excluir">
-                    <div class="card border-0 transform-on-hover">
-                        <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
-                        <a href="{{ asset('storage/images/galeria4.jpg')}}" data-lightbox="roadtrip" data-title="beautiful oceans">
-                            <img src="{{ asset('storage/images/galeria4.jpg')}}" class="w-100">
-                        </a>      
-                    </div>
-                </div> 
-
-                <div class="col-md-4 col-lg-4 mostrar_excluir">
-                    <div class="card border-0 transform-on-hover">
-                        <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
-                        <a href="{{ asset('storage/images/galaria5.jpg')}}" data-lightbox="roadtrip" data-title="beautiful oceans">
-                            <img src="{{ asset('storage/images/galaria5.jpg')}}" class="w-100">
-                        </a>      
-                    </div>
-                </div> 
-
+                @foreach($posts as $post)
+                    <div class="col-md-4 col-lg-4 mostrar_excluir">
+                        <div class="card border-0 transform-on-hover">
+                            <!-- Configuracao do data-lightbox esta no layouts/app.blade.php -->
+                            <a href="{{Storage::cloud()->url('/') . $post->image }}" data-lightbox="roadtrip" data-title="{{ $post->caption }}">
+                                <img src="{{ Storage::cloud()->url('/') . $post->image }}" class="w-100">
+                            </a>      
+                        </div>
+                    </div>  
+                @endforeach     
 
             <div>
             <!-- FIM row -->
