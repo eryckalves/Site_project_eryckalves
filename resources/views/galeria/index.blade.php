@@ -4,6 +4,7 @@ style .mostrar_excluir:hover .thumbnail a para mostrar o botao de excluir quando
 
 @extends('layouts.app')
 
+
 <style>
     
     .thumbnail a 

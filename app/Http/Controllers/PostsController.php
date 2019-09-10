@@ -9,11 +9,13 @@ use App\Post;
 use App\User;
 use Aws\S3\S3Client;
 
+
 class PostsController extends Controller
 {
-    public function __contruct()
+
+    public function __construct()
     {
-        middleware('auth');
+        $this->middleware('auth');
     }
 
     public function create()

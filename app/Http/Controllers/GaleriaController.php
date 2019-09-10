@@ -8,6 +8,8 @@ use App\Post;
 
 class GaleriaController extends Controller
 {
+
+
     public function index(User $user)
     {
 

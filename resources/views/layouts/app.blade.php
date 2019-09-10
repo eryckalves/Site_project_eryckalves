@@ -70,6 +70,10 @@
                             <a class="nav-link" href="{{ route('contato.create') }}"><div class="{{Request::is('contato') ? 'marcador_text' : null}}">Contato</div></a>
                         </li>  
 
+                        <li class="nav-item">
+                            <div class="text-danger pl-4 font-weight-bold text-uppercase pt-2">!! Site apenas para testes !!</div>
+                        </li>  
+
                     </ul>
 
                     <!-- Right Side Of Navbar -->
@@ -115,3 +119,12 @@
     </div>
 </body>
 </html>
+
+
+<script type="text/javascript">
+    lightbox.option({
+        maxHeight: 1200,
+        maxWidth: 800
+
+    })
+</script>
