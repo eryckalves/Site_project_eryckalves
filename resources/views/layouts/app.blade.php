@@ -17,8 +17,6 @@
     <script src="{{ asset('js/lightbox.js') }}" type="text/javascript"></script>
     <script type="text/javascript" src="https://kit.fontawesome.com/ebd88ca084.js"></script>
 
-    
-
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -55,6 +53,9 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto ">
                          <li class="nav-item">
+                            <!-- outro jeito de buscar é usando action([\App\Http\Controllers\{apenas o nome}::class , '{nome_funcao exemplo index}']) 
+                                                             ou action('HomeController@index');               
+                           mais info site laravel helpers-->
                             <a class="nav-link" href="{{ route('sobre.index') }}"><div class="{{Request::is('sobre') ? 'marcador_text' : null}} ">Sobre nós</div></a>
                         </li> 
 

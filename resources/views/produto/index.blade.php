@@ -1,8 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-<section id="service" class="bg-light">
 
+<h1 class="text-center text-danger">Aba temporária ainda não finalizada</h1>
+
+<section id="service" class="">
 
         <!-- container -->
         <div class="container text-center">

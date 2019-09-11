@@ -60,6 +60,7 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        //criado para fazer regra personalizada comando para gerar arquivo AdminAuth : php artisan make:middleware {nome} , gerado na pasta app/https/middleware/{nome}.php
         'onlyAdmin' => \App\Http\Middleware\AdminAuth::class,
     ];
 

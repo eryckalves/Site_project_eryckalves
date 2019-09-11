@@ -1,6 +1,4 @@
 
-
-
 /* ********************************************  */
  /* *******Navbar layouts/app**********   */
 
@@ -249,7 +247,7 @@
         font-size: 15px;
         cursor: pointer;
         transition: 0.8s;
-        position: absolute;
+        position: relative;
         overflow: hidden;
     }
 
@@ -336,10 +334,200 @@
     }
 
 
+/********************* *******************************/
+/*******************  LOGIN PAGE  ********************/
 
+    #login
+    {
+        height: 95vh;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Roboto' , sans-serif;
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+    /* Variables */
+    :root
+    {
+        --primary-gradient: linear-gradient(to right, #f7f7f7, #2b5876);
+    }
 
+    #login .form-container
+    {
+        width: 100%;
+        max-width: 40rem;
+        background-color: #fff;
+        position: relative;
+        padding: 6rem 0;
+        box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);
+        border-radius: 1rem;
+        z-index: 1;
+    }
 
+    #login .form-container::before
+    {
+        content: '';
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 20rem;
+        background: linear-gradient(to left, #8edbff , #ec008c);
+        border-bottom-left-radius: 100%;
+        border-bottom-right-radius: 100%;
+        z-index: -1;
+    }
+
+    #login .form-heading
+    {
+        color: #fff;
+        font-size: 2.5rem;
+        position: absolute;
+        top: 1.5rem;
+        left: 6rem;
+    }
+
+    #login form
+    {
+        transform: translateX(6rem);
+        padding: 1rem 0;
+        background-color: #fff;
+        border-radius: 1rem;
+        box-shadow: 0 1px 1.5rem rgba(0, 0, 0, .1);
+    }
+    
+    #login .input-group
+    {
+        width: 90%;
+        margin: 0 auto;
+        position: relative;
+        display: flex;
+        align-items: baseline;
+    }
+
+    #login .input-group input
+    {
+        position: relative;
+        width: 80%;
+        padding: 1rem;
+        margin-top: .5rem;
+        border: none;
+        outline: none;
+        font-size: 1.8rem;
+        color: #fc6767;
+    }
+
+    #login .input-group > i
+    {
+        font-size: 2rem;
+        margin-right: 1rem;
+        color:#fc6767;
+    }
+
+    #login .input-group .bar
+    {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .1);
+        width: 100%;
+        height: 1px;
+    }
+
+    #login .input-group .bar::before
+    {
+        content: '';
+        position: absolute;
+        background-color: #fc6767;
+        width: 0;
+        height: 2px;
+        transition: width 650ms;
+    }
+
+    #login .input-group input:focus + .bar::before
+    {
+        width: 100%;
+    }
+
+    #login .input-group button
+    {
+        margin: 3rem 1.4rem;
+        padding: 1rem 5rem;
+        background: linear-gradient(to left, #8edbff , #ec008c);
+        border: none;
+        color: #fff;
+        font-size: 2.5rem;
+        cursor: pointer;
+        border-radius: 3rem;
+    }
+
+    #login .input-group button i
+    {
+        color:#ffffff;
+        transition: 0.7s;
+    }
+
+    #login .input-group button:hover i
+    {
+        color:rgba(0,0,30,.6);
+    }
+
+    #login .form-check-label
+    {
+       text-decoration: none;
+       color: #a1a1a1;
+    }
+
+    #login .password-recovery
+    {
+        text-align: center;
+    }
+
+    #login .password-recovery a
+    {
+       text-decoration: none;
+       color: #a1a1a1;
+       font-size: 1.5rem;
+    }
+
+    #login .password-recovery a span
+    {
+       color: #fc6767;
+    }
+
+    #login .password-recovery a span:hover
+    {
+        padding-bottom: 2px;
+        border-bottom: 2px solid #fc6767;
+    }
+
+    @media screen and (max-width: 1000px)
+    {
+        #login
+        {
+            height: 150vh;
+        }
+        #login .form-container::before
+        {
+            height: 10rem;
+        }
+        #login .form-heading
+        {
+            left:50%;
+            transform: translateX(-50%);
+        }
+
+        #login form{
+            border-radius: initial;
+            transform: initial;
+            box-shadow: none;
+        }
+    }
 
 
 

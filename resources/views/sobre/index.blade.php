@@ -247,7 +247,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Computer</h4>
                                 <h5 class="card-title">Procrastinator</h5>
-                                <p class="card-text">01101000 01100101 01101100 01101100 01101111</p>
+                                <p class="card-text">01101000 01100101 01101100 01101100 01101111 00100001</p>
                             </div>
                             <div class="card-footer">
                                  <a href="#"><small class="footer-text pl-sm-3"><i class="fab fa-facebook"></i></small></a>
